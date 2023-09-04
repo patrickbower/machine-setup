@@ -1,0 +1,18 @@
+tap "homebrew/bundle"
+
+# GUI Apps
+cask "clipy"
+cask "1password"
+cask "figma"
+cask "firefox"
+cask "google-chrome"
+cask "hiddenbar"
+cask "miro"
+cask "rambox"
+cask "rectangle"
+cask "rocket"
+cask "sourcetree"
+cask "spotify"
+cask "visual-studio-code"
+cask "warp"
+cask "menubar-countdown"
