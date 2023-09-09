@@ -1,0 +1,37 @@
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Open .zshrc to be edited in VS Code
+alias change="code ~/.zshrc"
+
+# Re-run source command on .zshrc to update current terminal session with new settings
+alias update="source ~/.zshrc"
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# Syntax highlighting - green for recognoised, red for unrecognised commands
+source /Users/patrick.bower/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Uses the zsh precmd function hook to set the tab title to the current working directory before each prompt
+function precmd () {
+    window_title="\\033]0;${PWD##*/}\\007"
+    echo -ne "$window_title"
+}
+
+# Hide strange % in zsh shell
+unsetopt PROMPT_SP
+
+# cd and then ls - http://alias.sh/cd-and-then-ls
+function cd () {
+	builtin cd "$@" && ls -a;
+}
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/patrick.bower/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/patrick.bower/Desktop/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/patrick.bower/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrick.bower/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
