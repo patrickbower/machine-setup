@@ -1,17 +1,26 @@
+# Taps
+tap "homebrew/cask"
+tap "homebrew/core"
 tap "homebrew/bundle"
 
-# GUI Apps
-cask "clipy"
-cask "1password"
-cask "figma"
-cask "firefox"
-cask "google-chrome"
-cask "hiddenbar"
-cask "miro"
-cask "rambox"
-cask "rectangle"
-cask "rocket"
-cask "sourcetree"
-cask "spotify"
-cask "visual-studio-code"
-cask "warp"
+# Artificial
+cask "figma"                    # Design and prototyping platform
+cask "hiddenbar"                # Menu bar icon manager
+cask "cursor"                   # Code editor
+cask "linear"                   # Project management tool
+cask "loom"                     # Screen recording and video messaging
+cask "1password"                # Password manager
+cask "notion"                   # Note taking app
+cask "slack"                    # Team communication tool
+cask "google-chrome"            # Web browser
+cask "google-chrome-canary"     # Web browser
+cask "firefox"                  # Web browser
+
+# Personal
+brew "zsh"                      # Shell
+cask "clipy"                    # Clipboard extension app   
+cask "warp"                     # Terminal 
+cask "raycast"                  # Spotlight replacement
+cask "sourcetree"               # Git client
+cask "visual-studio-code"       # Code editor
+cask "rambox"                   # Webapp client
